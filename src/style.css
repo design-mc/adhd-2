@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkText;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-white dark:bg-darkCard rounded-xl shadow-md p-6 border border-gray-200 dark:border-darkBorder;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary/90 text-white;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary/90 text-white;
+}
+
+.btn-accent {
+  @apply bg-accent hover:bg-accent/90 text-white;
+}
+
+.btn-outline {
+  @apply border border-gray-300 dark:border-darkBorder hover:bg-gray-100 dark:hover:bg-darkCard;
+}
+
+.slider {
+  @apply w-full h-2 bg-gray-200 dark:bg-darkBorder rounded-lg appearance-none cursor-pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 rounded-full bg-primary;
+}
+
+.option-btn {
+  @apply px-4 py-2 rounded-lg border border-gray-300 dark:border-darkBorder hover:bg-gray-100 dark:hover:bg-darkCard transition-all;
+}
+
+.option-btn.selected {
+  @apply bg-primary text-white border-primary;
+}
